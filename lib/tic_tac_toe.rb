@@ -100,7 +100,7 @@ class TicTacToe
       return nil
     end
   end
-  def play(board)
+  def play
     turn = 1
     while turn < 10 && !over?(board) do
       turn(board)
