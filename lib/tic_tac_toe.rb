@@ -89,11 +89,11 @@ class TicTacToe
   end
   
   def over?
-    won?(@board) || full?(@board) || draw?(@board)
+    won? || full? || draw?
   end
   
   def winner
-    if won?(@board)
+    if won?
       wincombo = won?
       return @board[wincombo[0]]
     else
