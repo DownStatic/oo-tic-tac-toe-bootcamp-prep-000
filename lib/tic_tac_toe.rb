@@ -65,22 +65,22 @@ class TicTacToe
     end
   end
   
-  def full?(board)
-    board.all?{|spot| spot.include?("X") || spot.include?("O")}
+  def full?
+    @board.all?{|spot| spot.include?("X") || spot.include?("O")}
   end
   
-  def draw?(board)
-    !(won?(board)) && full?(board)
+  def draw?
+    !(won?(@board)) && full?(@board)
   end
   
-  def over?(board)
-    won?(board) || full?(board) || draw?(board)
+  def over?
+    won?(@board) || full?(@board) || draw?(@board)
   end
   
-  def winner(board)
-    if won?(board)
-      wincombo = won?(board)
-      return board[wincombo[0]]
+  def winner
+    if won?(@board)
+      wincombo = won?
+      return @board[wincombo[0]]
     else
       return nil
     end
