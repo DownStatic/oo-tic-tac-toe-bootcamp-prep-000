@@ -101,14 +101,14 @@ class TicTacToe
     end
   end
   def play
-    turn = 1
-    while turn < 10 && !over?(board) do
-      turn(board)
-      turn += 1
+    current_turn = 1
+    while current_turn < 10 && !over? do
+      turn
+      current_turn += 1
     end
-    if won?(board)
-        puts "Congratulations #{winner(board)}!"
-    elsif draw?(board)
+    if won?
+        puts "Congratulations #{winner}!"
+    elsif draw?
         puts "Cat's Game!"
     end
   end
